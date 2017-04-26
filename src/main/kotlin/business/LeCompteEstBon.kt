@@ -1,3 +1,5 @@
+package business
+
 import java.util.*
 
 /**
@@ -6,7 +8,7 @@ import java.util.*
  * @author Guillaume Chanson
  * @version 1.0
  */
-class LeCompteEstBon(val toGuess: Int, val numbers: Array<Int>) {
+data class LeCompteEstBon(val toGuess: Int, val numbers: Array<Int>) {
 
     /**
      * Companion object to provide an useful factory for creating a game with values.

@@ -1,5 +1,7 @@
+package business
+
 /**
- * Solver for {@link LeCompteEstBon} game.
+ * main.kotlin.Solver for {@link business.LeCompteEstBon} game.
  *
  * @author Guillaume Chanson
  * @version 1.0
@@ -30,6 +32,7 @@ class Solver(val toGuess: Int, val numbers: IntArray) {
 
         // On calcule toutes les combinaison de signe
         possibleStrings(nbNumbers - 1, alphabet, "")
+        // TODO : enlever les doublons (priorités, parenthèses ...)
 
         // On rajoute un "+" devant toutes les combinaisons calculées (afin de calculer facilement toutes les possibilités plus tard)
         val allOpPossibilities = Array(Math.pow(alphabet.size.toDouble(), (nbNumbers - 1).toDouble()).toInt()) { CharArray(nbNumbers) }
